@@ -20,10 +20,9 @@ RUN apt-get update && \
 
 # Install Chrome Remote Desktop, XFCE, Chrome, and Antigravity
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
         chrome-remote-desktop \
         xfce4 \
-        xfce4-terminal \
         desktop-base \
         dbus-x11 \
         xscreensaver \
