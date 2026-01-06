@@ -23,6 +23,7 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         chrome-remote-desktop \
         xfce4 \
+        xfce4-terminal \
         desktop-base \
         dbus-x11 \
         xscreensaver \
