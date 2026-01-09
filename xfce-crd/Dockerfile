@@ -3,6 +3,7 @@ FROM us-central1-docker.pkg.dev/cloud-workstations-images/predefined/code-oss:la
 
 # Install initial dependencies and setup repositories in a single layer
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y --no-install-recommends curl gpg wget && \
     # Add Chrome Remote Desktop repository
     curl https://dl.google.com/linux/linux_signing_key.pub | \
