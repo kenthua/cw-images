@@ -26,7 +26,7 @@ if [ ${CLOUD_WORKSTATIONS_CONFIG_DISABLE_SUDO:-false} == "true" ]; then
         groups=docker
 fi
 
-useradd -m user -u $userid -G $groups --shell /bin/bash > /dev/null
+useradd -m user -u $userid -G $groups --shell /usr/bin/zsh > /dev/null
 passwd -d user >/dev/null
 echo "%sudo ALL=NOPASSWD: ALL" >> /etc/sudoers
 
