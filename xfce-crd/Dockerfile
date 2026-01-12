@@ -44,3 +44,7 @@ RUN bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-
 COPY files/010_add-user.sh /etc/workstation-startup.d/
 COPY files/200_setup_crd.sh /etc/workstation-startup.d/
 COPY files/entrypoint.sh /google/scripts/
+
+# Copy misc files
+COPY files/default.zshrc /etc/skel/.zshrc
+RUN chown root:root /etc/skel/.zshrc && chmod 644 /etc/skel/.zshrc

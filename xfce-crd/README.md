@@ -13,6 +13,9 @@ REPO_URL=us-central1-docker.pkg.dev/$PROJECT_ID/$REPO/$IMAGE .
 gcloud builds submit --tag $REPO_URL .
 ```
 
+# Optional
+the `zsh` shell is installed and configured for `user`. If you want to install/configuare oh-my-zsh, then copy contents the `customize_environment.sh` and put it in `${HOME}/.workstation/customize_environment.sh`
+
 # Misc
 For the e2 family which lacks GPU acceleration and other flags, here are some example launch scripts for a more stable experience for both antigravity and chrome.
 
