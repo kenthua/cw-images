@@ -40,6 +40,9 @@ RUN apt-get update && \
 # Configure Chrome Remote Desktop session
 RUN bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
 
+# Install the latest geminicli
+RUN npm update -g @google/gemini-cli
+
 # Copy startup scripts
 COPY files/010_add-user.sh /etc/workstation-startup.d/
 COPY files/200_setup_crd.sh /etc/workstation-startup.d/
