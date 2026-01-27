@@ -1,6 +1,10 @@
 # default cloud workstations image
 FROM us-central1-docker.pkg.dev/cloud-workstations-images/predefined/code-oss:latest
 
+# Update yarn key, due to EXPKEYSIG error
+RUN curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg \
+    -o /etc/apt/keyrings/yarn.asc
+
 # Install initial dependencies and setup repositories in a single layer
 RUN apt-get update && \
     apt-get upgrade -y && \
